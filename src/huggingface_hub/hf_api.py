@@ -650,7 +650,7 @@ class RepoFile:
         security = kwargs.pop("security", None)
         if security is not None:
             security = BlobSecurityInfo(
-                safe=security["safe"], av_scan=security["avScan"], pickle_import_scan=security["pickleImportScan"]
+                safe=security["hf"]["safe"], av_scan=security["hf"]["avScan"], pickle_import_scan=security["hf"]["pickleImportScan"]
             )
         self.security = security
 
